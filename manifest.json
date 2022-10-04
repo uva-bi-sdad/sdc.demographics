@@ -1,260 +1,12 @@
 {
   "name": "sdc.demographics_dev",
   "measure_not_found": 0,
-  "count": 31,
-  "utc_audited": "2022-09-27 14:11:56",
+  "count": 25,
+  "utc_audited": "2022-10-04 15:16:49",
   "data": [
     {
-      "name": "ncr_cttrbg_acs_2009_2019_demographics.csv.xz",
-      "path": "old folder/acs_demographics/data/distribution/ncr_cttrbg_acs_2009_2019_demographics.csv.xz",
-      "md5": "3dfef8afd7aec50ed062802281fbf8e2",
-      "size": 13722628,
-      "measure_info": [
-        {
-          "category": "Demographics",
-          "measure_table": "ncr_cttrbg_2009_2019_acs_demographics",
-          "full_name": "acs_demographics:perc_black",
-          "measure": "perc_black",
-          "short_name": "Black population",
-          "long_name": "Black population (percent)",
-          "short_description": "The Black population population percent. Based on American Community Survey ACS 2015/2019 5-year estimates.",
-          "long_description": "The Black population percent. Based on American Community Survey ACS 2015/2019 5-year estimates Table B01001.",
-          "statement": "The Black population is {value} in {features.name}.",
-          "type": "percent",
-          "equity_category": "Status",
-          "sources": [
-            {
-              "name": "American Community Survey Table B01001",
-              "date_accessed": 2021,
-              "url": "https://www.census.gov/programs-surveys/acs.html"
-            }
-          ]
-        },
-        {
-          "category": "Demographics",
-          "measure_table": "ncr_cttrbg_2009_2019_acs_demographics",
-          "full_name": "acs_demographics:perc_native",
-          "measure": "perc_native",
-          "short_name": "Native population",
-          "long_name": "Native population (percent)",
-          "short_description": "The Native population population percent. Based on American Community Survey ACS 2015/2019 5-year estimates.",
-          "long_description": "The Native population percent. Based on American Community Survey ACS 2015/2019 5-year estimates Table B01001.",
-          "statement": "The Native population is {value} in {features.name}.",
-          "type": "percent",
-          "equity_category": "Status",
-          "sources": [
-            {
-              "name": "American Community Survey Table B01001",
-              "date_accessed": 2021,
-              "url": "https://www.census.gov/programs-surveys/acs.html"
-            }
-          ]
-        },
-        {
-          "category": "Demographics",
-          "measure_table": "ncr_cttrbg_2009_2019_acs_demographics",
-          "full_name": "acs_demographics:perc_AAPI",
-          "measure": "perc_AAPI",
-          "short_name": "Asian American/Pacific Islander population",
-          "long_name": "Asian American/Pacific Islander population (percent)",
-          "short_description": "The Asian American/Pacific Islander population population percent. Based on American Community Survey ACS 2015/2019 5-year estimates.",
-          "long_description": "The Asian American/Pacific Islander population percent. Based on American Community Survey ACS 2015/2019 5-year estimates Table B01001.",
-          "statement": "The Asian American/Pacific Islander population is {value} in {features.name}.",
-          "type": "percent",
-          "equity_category": "Status",
-          "sources": [
-            {
-              "name": "American Community Survey Table B01001",
-              "date_accessed": 2021,
-              "url": "https://www.census.gov/programs-surveys/acs.html"
-            }
-          ]
-        },
-        {
-          "category": "Demographics",
-          "measure_table": "ncr_cttrbg_2009_2019_acs_demographics",
-          "full_name": "acs_demographics:perc_white",
-          "measure": "perc_white",
-          "short_name": "White population",
-          "long_name": "White population (percent)",
-          "short_description": "The White population population percent. Based on American Community Survey ACS 2015/2019 5-year estimates.",
-          "long_description": "The White population percent. Based on American Community Survey ACS 2015/2019 5-year estimates Table B01001.",
-          "statement": "The White population is {value} in {features.name}.",
-          "type": "percent",
-          "equity_category": "Status",
-          "sources": [
-            {
-              "name": "American Community Survey Table B01001",
-              "date_accessed": 2021,
-              "url": "https://www.census.gov/programs-surveys/acs.html"
-            }
-          ]
-        },
-        {
-          "category": "Demographics",
-          "measure_table": "ncr_cttrbg_2009_2019_acs_demographics",
-          "full_name": "acs_demographics:perc_hispanic_or_latino",
-          "measure": "perc_hispanic_or_latino",
-          "short_name": "Hispanic/Latino population",
-          "long_name": "Hispanic/Latino population (percent)",
-          "short_description": "The Hispanic/Latino population population percent. Based on American Community Survey ACS 2015/2019 5-year estimates.",
-          "long_description": "The Hispanic/Latino population percent. Based on American Community Survey ACS 2015/2019 5-year estimates Table B01001.",
-          "statement": "The Hispanic/Latino population is {value} in {features.name}.",
-          "type": "percent",
-          "equity_category": "Status",
-          "sources": [
-            {
-              "name": "American Community Survey Table B01001",
-              "date_accessed": 2021,
-              "url": "https://www.census.gov/programs-surveys/acs.html"
-            }
-          ]
-        },
-        {
-          "category": "Demographics",
-          "measure_table": "ncr_cttrbg_2009_2019_acs_demographics",
-          "full_name": "demographics:perc_other",
-          "measure": "perc_other",
-          "short_name": "Other racial population",
-          "long_name": "Other racial population (percent)",
-          "short_description": "The Other racial population population percent. Based on American Community Survey ACS 2015/2019 5-year estimates.",
-          "long_description": "The Other racial population percent. Based on American Community Survey ACS 2015/2019 5-year estimates Table B01001.",
-          "statement": "The Other racial population is {value} in {features.name}.",
-          "type": "percent",
-          "equity_category": "Status",
-          "sources": [
-            {
-              "name": "American Community Survey Table B01001",
-              "date_accessed": 2021,
-              "url": "https://www.census.gov/programs-surveys/acs.html"
-            }
-          ]
-        },
-        {
-          "category": "Demographics",
-          "measure_table": "ncr_cttrbg_2009_2019_acs_demographics",
-          "full_name": "acs_demographics:perc_two_or_more_races",
-          "measure": "perc_two_or_more_races",
-          "short_name": "Two or more races population",
-          "long_name": "Two or more races population (percent)",
-          "short_description": "The two or more races population percent. Based on American Community Survey ACS 2015/2019 5-year estimates.",
-          "long_description": "The two or more races population percent. Based on American Community Survey ACS 2015/2019 5-year estimates Table B01001.",
-          "statement": "The two or more races population is {value} in {features.name}.",
-          "type": "percent",
-          "equity_category": "Status",
-          "sources": [
-            {
-              "name": "American Community Survey Table B01001",
-              "date_accessed": 2021,
-              "url": "https://www.census.gov/programs-surveys/acs.html"
-            }
-          ]
-        },
-        {
-          "category": "Demographics",
-          "measure_table": "ncr_cttrbg_2009_2019_acs_demographics",
-          "full_name": "acs_demographics:perc_under_20",
-          "measure": "perc_under_20",
-          "short_name": "Under 20 population",
-          "long_name": "Under 20 population (percent)",
-          "short_description": "The percent of the population under age 20. Based on American Community Survey ACS 2015/2019 5-year estimates.",
-          "long_description": "The percent of the population under age 20. Based on American Community Survey ACS 2015/2019 5-year estimates Table B01001.",
-          "statement": "The percent of the population under age 20 is {value} in {features.name}.",
-          "type": "percent",
-          "equity_category": "Status",
-          "sources": [
-            {
-              "name": "American Community Survey Table B01001",
-              "date_accessed": 2021,
-              "url": "https://www.census.gov/programs-surveys/acs.html"
-            }
-          ]
-        },
-        {
-          "category": "Demographics",
-          "measure_table": "ncr_cttrbg_2009_2019_acs_demographics",
-          "full_name": "acs_demographics:perc_20_64",
-          "measure": "perc_20_64",
-          "short_name": "20 to 64 population",
-          "long_name": "20 to 64 population (percent)",
-          "short_description": "The percent of the population between age 20 and 64. Based on American Community Survey ACS 2015/2019 5-year estimates.",
-          "long_description": "The percent of the population between age 20 and 64. Based on American Community Survey ACS 2015/2019 5-year estimates Table B01001.",
-          "statement": "The percent of the population between age 20 and 64 is {value} in {features.name}.",
-          "type": "percent",
-          "equity_category": "Status",
-          "sources": [
-            {
-              "name": "American Community Survey Table B01001",
-              "date_accessed": 2021,
-              "url": "https://www.census.gov/programs-surveys/acs.html"
-            }
-          ]
-        },
-        {
-          "category": "Demographics",
-          "measure_table": "ncr_cttrbg_2009_2019_acs_demographics",
-          "full_name": "demographics:perc_65_plus",
-          "measure": "perc_65_plus",
-          "short_name": "65 plus population",
-          "long_name": "65 plus population (percent)",
-          "short_description": "The percent of the population over age 64. Based on American Community Survey ACS 2015/2019 5-year estimates.",
-          "long_description": "The percent of the population over age 64. Based on American Community Survey ACS 2015/2019 5-year estimates Table B01001.",
-          "statement": "The percent of the population over age 64 is {value} in {features.name}.",
-          "type": "percent",
-          "equity_category": "Status",
-          "sources": [
-            {
-              "name": "American Community Survey Table B01001",
-              "date_accessed": 2021,
-              "url": "https://www.census.gov/programs-surveys/acs.html"
-            }
-          ]
-        },
-        {
-          "category": "Demographics",
-          "measure_table": "ncr_cttrbg_2009_2019_acs_demographics",
-          "full_name": "acs_demographics:perc_veteran",
-          "measure": "perc_veteran",
-          "short_name": "Veteran population",
-          "long_name": "Veteran population (percent)",
-          "short_description": "The Veteran population population percent. Based on American Community Survey ACS 2015/2019 5-year estimates.",
-          "long_description": "The Veteran population percent. Based on American Community Survey ACS 2015/2019 5-year estimates Table B01001.",
-          "statement": "The Veteran population is {value} in {features.name}.",
-          "type": "percent",
-          "equity_category": "Status",
-          "sources": [
-            {
-              "name": "American Community Survey Table B01001",
-              "date_accessed": 2021,
-              "url": "https://www.census.gov/programs-surveys/acs.html"
-            }
-          ]
-        },
-        {
-          "category": "Demographics",
-          "measure_table": "ncr_cttrbg_2009_2019_acs_demographics",
-          "full_name": "acs_demographics:perc_hh_limited_english",
-          "measure": "perc_hh_limited_english",
-          "short_name": "Limited English households",
-          "long_name": "Limited English households (percent)",
-          "short_description": "The percent of households with limited English. Based on American Community Survey ACS 2015/2019 5-year estimates.",
-          "long_description": "The percent of households with limited English. Based on American Community Survey ACS 2015/2019 5-year estimates Table C16002.",
-          "statement": "The percent of households with limited English is {value} in {features.name}.",
-          "type": "percent",
-          "equity_category": "Status",
-          "sources": [
-            {
-              "name": "American Community Survey Table C16002",
-              "date_accessed": 2021,
-              "url": "https://www.census.gov/programs-surveys/acs.html"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "va_hdcttr_acs_2009_2019_demographics.csv.xz",
-      "path": "old folder/acs_demographics/data/distribution/va_hdcttr_acs_2009_2019_demographics.csv.xz",
+      "path": "old_folder/acs_demographics/data/distribution/va_hdcttr_acs_2009_2019_demographics.csv.xz",
       "md5": "83734acabf1cf4cbd9c7febef81cfef3",
       "size": 8879076,
       "measure_info": [
@@ -502,27 +254,27 @@
     },
     {
       "name": "measure_info.json",
-      "path": "old folder/acs_demographics/data/distribution/measure_info.json",
+      "path": "old_folder/acs_demographics/data/distribution/measure_info.json",
       "md5": "5e58a24fa0af1666ba3f563f7387b4fb",
       "size": 11293
     },
     {
       "name": "measure_info.json",
-      "path": "population/DC/overall_DC/synthetic/housing_units_distribution_method/ssl/data/distribution/measure_info.json",
+      "path": "population/DC/overall_DC/new_geography_synthetic/housing_units_distribution_method/ssl/data/distribution/measure_info.json",
       "md5": "1693baa8ce733b0d8d559f8bcc1e8007",
       "size": 11505
     },
     {
       "name": "dc_ssl_geometry.geojson.zip",
-      "path": "population/DC/overall_DC/synthetic/housing_units_distribution_method/ssl/data/distribution/dc_ssl_geometry.geojson.zip",
-      "md5": "9bc3c4c6ef9420472860cd24b8a0d9c6",
-      "size": 3816646
+      "path": "population/DC/overall_DC/new_geography_synthetic/housing_units_distribution_method/ssl/data/distribution/dc_ssl_geometry.geojson.zip",
+      "md5": "9bcf3776d6cd09dd4a06a58c826373dd",
+      "size": 7635067
     },
     {
       "name": "dc001_ssl_sdad_2019_demographics.csv.xz",
-      "path": "population/DC/overall_DC/synthetic/housing_units_distribution_method/ssl/data/distribution/dc001_ssl_sdad_2019_demographics.csv.xz",
-      "md5": "a9be838513be3a7b2c0b6778848116d2",
-      "size": 8493732,
+      "path": "population/DC/overall_DC/new_geography_synthetic/housing_units_distribution_method/ssl/data/distribution/dc001_ssl_sdad_2019_demographics.csv.xz",
+      "md5": "fcdef57ebd5a4a3d133838bafe58890f",
+      "size": 8506504,
       "measure_info": [
         {
           "category": "Demographics",
@@ -767,62 +519,62 @@
       ]
     },
     {
-      "name": "va059_pd_hud_sdad_2019_gender.csv.xz",
-      "path": "population/VA/fairfax/gender/data/distribution/va059_pd_hud_sdad_2019_gender.csv.xz",
-      "md5": "2f45352e420a623ee28acdd6b8869b6d",
-      "size": 652
+      "name": "dc001_sdad_2019_gender.csv.xz",
+      "path": "population/DC/gender/data/distribution/dc001_sdad_2019_gender.csv.xz",
+      "md5": "07b176cab8e49cf8e9a55347659b3abf",
+      "size": 5420
     },
     {
-      "name": "va059_zc_hud_sdad_2019_gender.csv.xz",
-      "path": "population/VA/fairfax/gender/data/distribution/va059_zc_hud_sdad_2019_gender.csv.xz",
-      "md5": "feac623b089b11cb4c20881801e992c9",
-      "size": 1568
+      "name": "dc001_sdad_2019_race.csv.xz",
+      "path": "population/DC/race/data/distribution/dc001_sdad_2019_race.csv.xz",
+      "md5": "6a9511b6a15707cd20a86261cef5c3b4",
+      "size": 3244
     },
     {
-      "name": "va059_sd_hud_sdad_2019_gender.csv.xz",
-      "path": "population/VA/fairfax/gender/data/distribution/va059_sd_hud_sdad_2019_gender.csv.xz",
-      "md5": "eae0cf16959819b1030b3a8d9998aad5",
-      "size": 532
+      "name": "dc001_sdad_2019_age.csv.xz",
+      "path": "population/DC/age/data/distribution/dc001_sdad_2019_age.csv.xz",
+      "md5": "43437303fac0922a989afc1adaecfdab",
+      "size": 9708
     },
     {
-      "name": "va059_hsr_hud_sdad_2019_gender.csv.xz",
-      "path": "population/VA/fairfax/gender/data/distribution/va059_hsr_hud_sdad_2019_gender.csv.xz",
-      "md5": "1c63e6a4680d43c1cc33f21faa1d2169",
-      "size": 272
+      "name": "ncr_cttrbg_acs_2009_2019_demographics.csv.xz",
+      "path": "population/NCR/data/distribution/ncr_cttrbg_acs_2009_2019_demographics.csv.xz",
+      "md5": "3dfef8afd7aec50ed062802281fbf8e2",
+      "size": 13722628
     },
     {
-      "name": "va059_pc_hud_sdad_2019_gender.csv.xz",
-      "path": "population/VA/fairfax/gender/data/distribution/va059_pc_hud_sdad_2019_gender.csv.xz",
-      "md5": "05d715c226433886420b2e21a155b782",
-      "size": 1978992
+      "name": "va059_sdad_2019_gender.csv.xz",
+      "path": "population/VA/fairfax/gender/data/distribution/va059_sdad_2019_gender.csv.xz",
+      "md5": "d52a68cad4992dc9ac5b8ea3a6a6a476",
+      "size": 2560
     },
     {
       "name": "va059_zc_sdad_2019_demographics.csv.xz",
-      "path": "population/VA/fairfax/overall_fairfax/synthetic_population/housing_units_distribution_method/zip_code/data/distribution/va059_zc_sdad_2019_demographics.csv.xz",
+      "path": "population/VA/fairfax/overall_fairfax/new_geography_synthetic/housing_units_distribution_method/zip_code/data/distribution/va059_zc_sdad_2019_demographics.csv.xz",
       "md5": "33a24844f445af341d0e8613f6044485",
       "size": 6748
     },
     {
       "name": "va059_hsr_sdad_2019_demographics.csv.xz",
-      "path": "population/VA/fairfax/overall_fairfax/synthetic_population/housing_units_distribution_method/human_service_regions/data/distribution/va059_hsr_sdad_2019_demographics.csv.xz",
+      "path": "population/VA/fairfax/overall_fairfax/new_geography_synthetic/housing_units_distribution_method/human_service_regions/data/distribution/va059_hsr_sdad_2019_demographics.csv.xz",
       "md5": "0930f4ec7a4934f6b1f7b1f783107c17",
       "size": 776
     },
     {
       "name": "va059_sd_sdad_2019_demographics.csv.xz",
-      "path": "population/VA/fairfax/overall_fairfax/synthetic_population/housing_units_distribution_method/supervisor_districts/data/distribution/va059_sd_sdad_2019_demographics.csv.xz",
+      "path": "population/VA/fairfax/overall_fairfax/new_geography_synthetic/housing_units_distribution_method/supervisor_districts/data/distribution/va059_sd_sdad_2019_demographics.csv.xz",
       "md5": "10b4b1bb5768205c46ec959f6fdef88a",
       "size": 1576
     },
     {
       "name": "va059_pd_sdad_2019_demographics.csv.xz",
-      "path": "population/VA/fairfax/overall_fairfax/synthetic_population/housing_units_distribution_method/planning_districts/data/distribution/va059_pd_sdad_2019_demographics.csv.xz",
+      "path": "population/VA/fairfax/overall_fairfax/new_geography_synthetic/housing_units_distribution_method/planning_districts/data/distribution/va059_pd_sdad_2019_demographics.csv.xz",
       "md5": "4d81a0228e4be83d8a8e481437e1e624",
       "size": 2236
     },
     {
       "name": "va059_pc_sdad_2019_demographics.csv.xz",
-      "path": "population/VA/fairfax/overall_fairfax/synthetic_population/housing_units_distribution_method/parcels/data/distribution/va059_pc_sdad_2019_demographics.csv.xz",
+      "path": "population/VA/fairfax/overall_fairfax/new_geography_synthetic/housing_units_distribution_method/parcels/data/distribution/va059_pc_sdad_2019_demographics.csv.xz",
       "md5": "a245779e9acace2457a1c3ecfe981a3f",
       "size": 24858404,
       "measure_info": [
@@ -1070,79 +822,31 @@
     },
     {
       "name": "measure_info.json",
-      "path": "population/VA/fairfax/overall_fairfax/synthetic_population/housing_units_distribution_method/parcels/data/distribution/measure_info.json",
+      "path": "population/VA/fairfax/overall_fairfax/new_geography_synthetic/housing_units_distribution_method/parcels/data/distribution/measure_info.json",
       "md5": "1693baa8ce733b0d8d559f8bcc1e8007",
       "size": 11505
     },
     {
       "name": "fairfax_parcel_geometry.geojson.zip",
-      "path": "population/VA/fairfax/overall_fairfax/synthetic_population/housing_units_distribution_method/parcels/data/distribution/fairfax_parcel_geometry.geojson.zip",
+      "path": "population/VA/fairfax/overall_fairfax/new_geography_synthetic/housing_units_distribution_method/parcels/data/distribution/fairfax_parcel_geometry.geojson.zip",
       "md5": "90bd49d112a068e8629fbd0401938168",
       "size": 51075817
     },
     {
-      "name": "va059_pc_hud_sdad_2019_race.csv.xz",
-      "path": "population/VA/fairfax/race/data/distribution/va059_pc_hud_sdad_2019_race.csv.xz",
-      "md5": "5805c7ad52f2a332c1e48bf44c229ff6",
-      "size": 15505272
+      "name": "va059_sdad_2019_race.csv.xz",
+      "path": "population/VA/fairfax/race/data/distribution/va059_sdad_2019_race.csv.xz",
+      "md5": "d52a68cad4992dc9ac5b8ea3a6a6a476",
+      "size": 2560
     },
     {
-      "name": "va059_hsr_hud_sdad_2019_race.csv.xz",
-      "path": "population/VA/fairfax/race/data/distribution/va059_hsr_hud_sdad_2019_race.csv.xz",
-      "md5": "0795c0c726ce14ba3e5d20cf90b2eaa1",
-      "size": 512
-    },
-    {
-      "name": "va059_pd_hud_sdad_2019_race.csv.xz",
-      "path": "population/VA/fairfax/race/data/distribution/va059_pd_hud_sdad_2019_race.csv.xz",
-      "md5": "d7b1dd4c2652add6023b3b4c2f61ef15",
-      "size": 1380
-    },
-    {
-      "name": "va059_zc_hud_sdad_2019_race.csv.xz",
-      "path": "population/VA/fairfax/race/data/distribution/va059_zc_hud_sdad_2019_race.csv.xz",
-      "md5": "4a19d10349484f2ca44966d81a74f5c2",
-      "size": 3920
-    },
-    {
-      "name": "va059_sd_hud_sdad_2019_race.csv.xz",
-      "path": "population/VA/fairfax/race/data/distribution/va059_sd_hud_sdad_2019_race.csv.xz",
-      "md5": "f070aae032cf117ae346d2d579a0b189",
-      "size": 1024
-    },
-    {
-      "name": "va059_sd_hud_sdad_2019_age.csv.xz",
-      "path": "population/VA/fairfax/age/data/distribution/va059_sd_hud_sdad_2019_age.csv.xz",
-      "md5": "06ed7b9255a7a2dc0fab8438d398c61d",
-      "size": 784
-    },
-    {
-      "name": "va059_pd_hud_sdad_2019_age.csv.xz",
-      "path": "population/VA/fairfax/age/data/distribution/va059_pd_hud_sdad_2019_age.csv.xz",
-      "md5": "d267a43057b44eaceb0e5e096bb7e1bb",
-      "size": 1028
-    },
-    {
-      "name": "va059_pc_hud_sdad_2019_age.csv.xz",
-      "path": "population/VA/fairfax/age/data/distribution/va059_pc_hud_sdad_2019_age.csv.xz",
-      "md5": "d2697d8be3c2b5e93afbb0b311380322",
-      "size": 4180764
-    },
-    {
-      "name": "va059_hsr_hud_sdad_2019_age.csv.xz",
-      "path": "population/VA/fairfax/age/data/distribution/va059_hsr_hud_sdad_2019_age.csv.xz",
-      "md5": "8fa10aa2ec93505247afd228b4af7408",
-      "size": 400
-    },
-    {
-      "name": "va059_zc_hud_sdad_2019_age.csv.xz",
-      "path": "population/VA/fairfax/age/data/distribution/va059_zc_hud_sdad_2019_age.csv.xz",
-      "md5": "1aae319b9479f8264ac18712ed0a90f9",
-      "size": 2800
+      "name": "va059_sdad_2019_age.csv.xz",
+      "path": "population/VA/fairfax/age/data/distribution/va059_sdad_2019_age.csv.xz",
+      "md5": "07f5a8704fb6392d2e81d99a7a0e3db3",
+      "size": 17600
     },
     {
       "name": "va013_pc_sdad_2019_demographics.csv.xz",
-      "path": "population/VA/arlington/overall_arlington/synthetic/housing_units_distribution_method/parcels/data/distribution/va013_pc_sdad_2019_demographics.csv.xz",
+      "path": "population/VA/arlington/overall_arlington/new_geography_synthetic/housing_units_distribution_method/parcels/data/distribution/va013_pc_sdad_2019_demographics.csv.xz",
       "md5": "83274b297023fce5af59da70b9366492",
       "size": 2206092,
       "measure_info": [
@@ -1390,15 +1094,33 @@
     },
     {
       "name": "measure_info.json",
-      "path": "population/VA/arlington/overall_arlington/synthetic/housing_units_distribution_method/parcels/data/distribution/measure_info.json",
+      "path": "population/VA/arlington/overall_arlington/new_geography_synthetic/housing_units_distribution_method/parcels/data/distribution/measure_info.json",
       "md5": "1693baa8ce733b0d8d559f8bcc1e8007",
       "size": 11505
     },
     {
       "name": "va_arl_parcel_geometry.geojson.zip",
-      "path": "population/VA/arlington/overall_arlington/synthetic/housing_units_distribution_method/parcels/data/distribution/va_arl_parcel_geometry.geojson.zip",
-      "md5": "f89c8683d295b2075bc154bee7f24232",
-      "size": 4537897
+      "path": "population/VA/arlington/overall_arlington/new_geography_synthetic/housing_units_distribution_method/parcels/data/distribution/va_arl_parcel_geometry.geojson.zip",
+      "md5": "c98578b0bba8e4fb7ea6625a51c102eb",
+      "size": 9075948
+    },
+    {
+      "name": "va013_sdad_2019_gender.csv.xz",
+      "path": "population/VA/arlington/gender/data/distribution/va013_sdad_2019_gender.csv.xz",
+      "md5": "f3cdf0c0828872797e09647e750a9e0c",
+      "size": 2336
+    },
+    {
+      "name": "va013_sdad_2019_race.csv.xz",
+      "path": "population/VA/arlington/race/data/distribution/va013_sdad_2019_race.csv.xz",
+      "md5": "86463dfba8d6a6df871de3043715c600",
+      "size": 1456
+    },
+    {
+      "name": "va013_sdad_2019_age.csv.xz",
+      "path": "population/VA/arlington/age/data/distribution/va013_sdad_2019_age.csv.xz",
+      "md5": "6682ce6097cc75e8510069792cb28103",
+      "size": 4048
     }
   ],
   "_references": {}
