@@ -1,7 +1,7 @@
 {
   "name": "sdc.demographics_dev",
-  "count": 18,
-  "utc_audited": "2022-10-11 13:30:57",
+  "count": 20,
+  "utc_audited": "2022-10-11 15:24:36",
   "data": [
     {
       "name": "va_hdcttr_acs_2009_2019_demographics.csv.xz",
@@ -519,9 +519,21 @@
     },
     {
       "name": "ncr_cttrbg_acs_2009_2019_demographics.csv.xz",
-      "path": "population/NCR/data/distribution/ncr_cttrbg_acs_2009_2019_demographics.csv.xz",
+      "path": "population/NCR/old/data/distribution/ncr_cttrbg_acs_2009_2019_demographics.csv.xz",
       "md5": "3dfef8afd7aec50ed062802281fbf8e2",
       "size": 13722628
+    },
+    {
+      "name": "ncr_sdad_2019_gender.csv.xz",
+      "path": "population/NCR/age/data/distribution/ncr_sdad_2019_gender.csv.xz",
+      "md5": "04a1bd1bd44b6eb264d150c34dc6bf18",
+      "size": 14512
+    },
+    {
+      "name": "ncr_sdad_2019_age.csv.xz",
+      "path": "population/NCR/age/data/distribution/ncr_sdad_2019_age.csv.xz",
+      "md5": "194b33462e8916a9e6a62cb37aca73fe",
+      "size": 26352
     },
     {
       "name": "va059_sdad_2019_gender.csv.xz",
@@ -1081,7 +1093,12 @@
     }
   ],
   "measure_generated": [],
-  "measure_to_check": [],
-  "measures_found": 4,
+  "no_match_in_measures_info": [],
+  "measures_found": [
+    "/home/runner/work/sdc.demographics_dev/sdc.demographics_dev/old_folder/acs_demographics/data/distribution/va_hdcttr_acs_2009_2019_demographics.csv.xz",
+    "/home/runner/work/sdc.demographics_dev/sdc.demographics_dev/population/DC/overall_DC/new_geography_synthetic/housing_units_distribution_method/ssl/data/distribution/dc001_ssl_sdad_2019_demographics.csv.xz",
+    "/home/runner/work/sdc.demographics_dev/sdc.demographics_dev/population/VA/fairfax/overall_fairfax/new_geography_synthetic/housing_units_distribution_method/parcels/data/distribution/va059_pc_sdad_2019_demographics.csv.xz",
+    "/home/runner/work/sdc.demographics_dev/sdc.demographics_dev/population/VA/arlington/overall_arlington/new_geography_synthetic/housing_units_distribution_method/parcels/data/distribution/va013_pc_sdad_2019_demographics.csv.xz"
+  ],
   "_references": {}
 }
