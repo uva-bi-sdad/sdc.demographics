@@ -1,8 +1,7 @@
 {
   "name": "sdc.demographics_dev",
-  "measure_not_found": 0,
-  "count": 25,
-  "utc_audited": "2022-10-04 15:16:49",
+  "count": 18,
+  "utc_audited": "2022-10-11 13:30:57",
   "data": [
     {
       "name": "va_hdcttr_acs_2009_2019_demographics.csv.xz",
@@ -251,24 +250,6 @@
           ]
         }
       ]
-    },
-    {
-      "name": "measure_info.json",
-      "path": "old_folder/acs_demographics/data/distribution/measure_info.json",
-      "md5": "5e58a24fa0af1666ba3f563f7387b4fb",
-      "size": 11293
-    },
-    {
-      "name": "measure_info.json",
-      "path": "population/DC/overall_DC/new_geography_synthetic/housing_units_distribution_method/ssl/data/distribution/measure_info.json",
-      "md5": "1693baa8ce733b0d8d559f8bcc1e8007",
-      "size": 11505
-    },
-    {
-      "name": "dc_ssl_geometry.geojson.zip",
-      "path": "population/DC/overall_DC/new_geography_synthetic/housing_units_distribution_method/ssl/data/distribution/dc_ssl_geometry.geojson.zip",
-      "md5": "9bcf3776d6cd09dd4a06a58c826373dd",
-      "size": 7635067
     },
     {
       "name": "dc001_ssl_sdad_2019_demographics.csv.xz",
@@ -821,18 +802,6 @@
       ]
     },
     {
-      "name": "measure_info.json",
-      "path": "population/VA/fairfax/overall_fairfax/new_geography_synthetic/housing_units_distribution_method/parcels/data/distribution/measure_info.json",
-      "md5": "1693baa8ce733b0d8d559f8bcc1e8007",
-      "size": 11505
-    },
-    {
-      "name": "fairfax_parcel_geometry.geojson.zip",
-      "path": "population/VA/fairfax/overall_fairfax/new_geography_synthetic/housing_units_distribution_method/parcels/data/distribution/fairfax_parcel_geometry.geojson.zip",
-      "md5": "90bd49d112a068e8629fbd0401938168",
-      "size": 51075817
-    },
-    {
       "name": "va059_sdad_2019_race.csv.xz",
       "path": "population/VA/fairfax/race/data/distribution/va059_sdad_2019_race.csv.xz",
       "md5": "d52a68cad4992dc9ac5b8ea3a6a6a476",
@@ -1093,18 +1062,6 @@
       ]
     },
     {
-      "name": "measure_info.json",
-      "path": "population/VA/arlington/overall_arlington/new_geography_synthetic/housing_units_distribution_method/parcels/data/distribution/measure_info.json",
-      "md5": "1693baa8ce733b0d8d559f8bcc1e8007",
-      "size": 11505
-    },
-    {
-      "name": "va_arl_parcel_geometry.geojson.zip",
-      "path": "population/VA/arlington/overall_arlington/new_geography_synthetic/housing_units_distribution_method/parcels/data/distribution/va_arl_parcel_geometry.geojson.zip",
-      "md5": "c98578b0bba8e4fb7ea6625a51c102eb",
-      "size": 9075948
-    },
-    {
       "name": "va013_sdad_2019_gender.csv.xz",
       "path": "population/VA/arlington/gender/data/distribution/va013_sdad_2019_gender.csv.xz",
       "md5": "f3cdf0c0828872797e09647e750a9e0c",
@@ -1123,5 +1080,8 @@
       "size": 4048
     }
   ],
+  "measure_generated": [],
+  "measure_to_check": [],
+  "measures_found": 4,
   "_references": {}
 }
