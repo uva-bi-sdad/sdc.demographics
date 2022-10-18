@@ -1,5 +1,5 @@
-[
-    {
+{
+    "pop_20_64": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -19,7 +19,7 @@
         "statement": "",
         "type": null
     },
-    {
+    "pop_65_plus": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -39,7 +39,7 @@
         "statement": "",
         "type": null
     },
-    {
+    "pop_under_20": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -59,7 +59,7 @@
         "statement": "",
         "type": null
     },
-    {
+    "total_pop": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -79,4 +79,4 @@
         "statement": "",
         "type": null
     }
-]
+}

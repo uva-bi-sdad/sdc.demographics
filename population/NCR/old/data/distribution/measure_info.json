@@ -1,5 +1,5 @@
-[
-    {
+{
+    "density": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -19,7 +19,7 @@
         "statement": "",
         "type": "density"
     },
-    {
+    "density_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -39,7 +39,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "hh_limited_english": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -59,7 +59,7 @@
         "statement": "",
         "type": "count"
     },
-    {
+    "hh_limited_english_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -79,7 +79,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "num_vet_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -99,7 +99,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "perc_20_64": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -119,7 +119,7 @@
         "statement": "",
         "type": "percent"
     },
-    {
+    "perc_20_64_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -139,7 +139,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "perc_65_plus": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -159,7 +159,7 @@
         "statement": "",
         "type": "percent"
     },
-    {
+    "perc_65_plus_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -179,7 +179,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "perc_AAPI": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -199,7 +199,7 @@
         "statement": "",
         "type": "percent"
     },
-    {
+    "perc_AAPI_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -219,7 +219,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "perc_black": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -239,7 +239,7 @@
         "statement": "",
         "type": "percent"
     },
-    {
+    "perc_black_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -259,7 +259,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "perc_hh_limited_english": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -279,7 +279,7 @@
         "statement": "",
         "type": "percent"
     },
-    {
+    "perc_hh_limited_english_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -299,7 +299,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "perc_hispanic_or_latino": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -319,7 +319,7 @@
         "statement": "",
         "type": "percent"
     },
-    {
+    "perc_hispanic_or_latino_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -339,7 +339,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "perc_native": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -359,7 +359,7 @@
         "statement": "",
         "type": "percent"
     },
-    {
+    "perc_native_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -379,7 +379,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "perc_other": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -399,7 +399,7 @@
         "statement": "",
         "type": "percent"
     },
-    {
+    "perc_other_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -419,7 +419,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "perc_two_or_more_races": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -439,7 +439,7 @@
         "statement": "",
         "type": "percent"
     },
-    {
+    "perc_two_or_more_races_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -459,7 +459,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "perc_under_20": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -479,7 +479,7 @@
         "statement": "",
         "type": "percent"
     },
-    {
+    "perc_under_20_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -499,7 +499,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "perc_veteran": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -519,7 +519,7 @@
         "statement": "",
         "type": "percent"
     },
-    {
+    "perc_veteran_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -539,7 +539,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "perc_white": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -559,7 +559,7 @@
         "statement": "",
         "type": "percent"
     },
-    {
+    "perc_white_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -579,7 +579,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "pop_20_64": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -599,7 +599,7 @@
         "statement": "",
         "type": "count"
     },
-    {
+    "pop_20_64_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -619,7 +619,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "pop_65_plus": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -639,7 +639,7 @@
         "statement": "",
         "type": "count"
     },
-    {
+    "pop_65_plus_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -659,7 +659,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "pop_AAPI": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -679,7 +679,7 @@
         "statement": "",
         "type": "count"
     },
-    {
+    "pop_AAPI_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -699,7 +699,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "pop_black": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -719,7 +719,7 @@
         "statement": "",
         "type": "count"
     },
-    {
+    "pop_black_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -739,7 +739,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "pop_hispanic_or_latino": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -759,7 +759,7 @@
         "statement": "",
         "type": "count"
     },
-    {
+    "pop_hispanic_or_latino_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -779,7 +779,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "pop_native": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -799,7 +799,7 @@
         "statement": "",
         "type": "count"
     },
-    {
+    "pop_native_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -819,7 +819,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "pop_other": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -839,7 +839,7 @@
         "statement": "",
         "type": "count"
     },
-    {
+    "pop_other_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -859,7 +859,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "pop_total": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -879,7 +879,7 @@
         "statement": "",
         "type": "count"
     },
-    {
+    "pop_total_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -899,7 +899,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "pop_two_or_more_races": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -919,7 +919,7 @@
         "statement": "",
         "type": "count"
     },
-    {
+    "pop_two_or_more_races_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -939,7 +939,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "pop_under_20": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -959,7 +959,7 @@
         "statement": "",
         "type": "count"
     },
-    {
+    "pop_under_20_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -979,7 +979,7 @@
         "statement": "",
         "type": "MOE"
     },
-    {
+    "pop_veteran": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -999,7 +999,7 @@
         "statement": "",
         "type": "count"
     },
-    {
+    "pop_white": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -1019,7 +1019,7 @@
         "statement": "",
         "type": "count"
     },
-    {
+    "pop_white_MOE": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -1039,4 +1039,4 @@
         "statement": "",
         "type": "MOE"
     }
-]
+}

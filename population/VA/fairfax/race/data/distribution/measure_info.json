@@ -1,5 +1,5 @@
-[
-    {
+{
+    "pop_female": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -19,7 +19,7 @@
         "statement": "",
         "type": null
     },
-    {
+    "pop_male": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -39,4 +39,4 @@
         "statement": "",
         "type": null
     }
-]
+}

@@ -1,5 +1,5 @@
-[
-    {
+{
+    "total_pop": {
         "category": "",
         "equity_category": "",
         "full_name": "",
@@ -19,4 +19,4 @@
         "statement": "",
         "type": null
     }
-]
+}
