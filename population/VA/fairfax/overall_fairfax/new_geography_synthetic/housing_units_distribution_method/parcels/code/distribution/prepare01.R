@@ -7,6 +7,14 @@ library(stringr)
 library("rgdal", lib.loc="/usr/local/lib/R/site-library")
 library(tidyr)
 library(readr)
+<<<<<<< HEAD
+=======
+library(tidyverse)
+library(tidycensus)
+library(tigris)
+library(rjson)
+
+>>>>>>> master
 
 
 
@@ -144,6 +152,7 @@ fairfax_dmg_dt_geo <- fairfax_dmg_dt_geo %>%
 
 # ------------------------- cast long and save the data
 # Cast long and create variables
+<<<<<<< HEAD
 fairfax_dmg_dt_geo_long <-  melt(setDT(fairfax_dmg_dt_geo), id.vars = c("geoid","region_name"))
 fairfax_dmg_dt_geo_long$region_type <- "Parcel"
 fairfax_dmg_dt_geo_long$year <- "2019"
@@ -153,6 +162,21 @@ fairfax_dmg_dt_geo_long <- fairfax_dmg_dt_geo_long %>% select(geoid,region_type,
 colnames(fairfax_dmg_dt_geo_long) <- c("geoid", "region_type", "region_name", "year", "measure","value")
 
 # compress and save the data
+=======
+fairfax_dmg_dt_geo_long <-  melt(setDT(fairfax_dmg_dt_geo), id.vars = c("geoid","region_name")) %>%
+  mutate(region_type='Parcel',
+         year=2019,
+         measure_type=case_when(
+           grepl('pop',variable)==T ~ "count",
+           grepl('mult',variable)==T ~ "scale",
+           grepl('perc',variable)==T ~ "percentage"),
+         MOE='') %>%
+  select(geoid,region_type,region_name,year,measure=variable,value,measure_type,MOE)
+
+
+# compress and save the data
+savepath = "population/VA/fairfax/overall_fairfax/new_geography_synthetic/housing_units_distribution_method/parcels/data/working/"
+>>>>>>> master
 readr::write_csv(fairfax_dmg_dt_geo_long, xzfile(paste0(savepath,"va059_pc_sdad_2019_demographics.csv.xz"), compression = 9))
 
 
