@@ -69,8 +69,4 @@ for(state in states){
 # Once you finish a piece of code you can move it to the code/distribution folder, you can keep scrap/archive code in the code/working folder (same with the data folders, for scrap/archive tables)
 
 
-<<<<<<< HEAD
 write_csv(sexes, xzfile("./data/distribution/va_cttr_2010_2021_perc_male.csv.xz", compression = 9))
-=======
-write_csv(sexes, xzfile("./data/distribution/va_cttr_2017_2021_perc_male.csv.xz", compression = 9))
->>>>>>> 96d218240b259609b65c4b412c6587eea45ebf20
