@@ -1,10 +1,16 @@
 {
   "name": "sdc.demographics_dev",
   "measure_not_found": [
-    "/home/runner/work/sdc.demographics_dev/sdc.demographics_dev/Cooperative extension/data/distribution/va_cttr_2010_2021_perc_male.csv.xz"
+    "/home/runner/work/sdc.demographics_dev/sdc.demographics_dev/Cooperative extension/data/distribution/va_cttr_2010_2021_perc_male.csv.xz",
+    "/home/runner/work/sdc.demographics_dev/sdc.demographics_dev/Gender/data/distribution/ncr_trctbg_acs_20092020_gender_demographics.csv.xz",
+    "/home/runner/work/sdc.demographics_dev/sdc.demographics_dev/Gender/data/distribution/va_trctbg_acs_20092020_gender_demographics.csv.xz",
+    "/home/runner/work/sdc.demographics_dev/sdc.demographics_dev/Age/data/distribution/ncr_trctbg_acs_20092020_age_demographics.csv.xz",
+    "/home/runner/work/sdc.demographics_dev/sdc.demographics_dev/Age/data/distribution/va_trctbg_acs_20092020_age_demographics.csv.xz",
+    "/home/runner/work/sdc.demographics_dev/sdc.demographics_dev/Race/data/distribution/ncr_trctbg_acs_20092020_race_demographics.csv.xz",
+    "/home/runner/work/sdc.demographics_dev/sdc.demographics_dev/Race/data/distribution/va_trctbg_acs_20092020_race_demographics.csv.xz"
   ],
-  "count": 36,
-  "utc_audited": "2023-02-08 14:59:42",
+  "count": 39,
+  "utc_audited": "2023-02-08 17:47:22",
   "data": [
     {
       "name": "temp",
@@ -139,6 +145,12 @@
       "size": 0
     },
     {
+      "name": "measure_info.json",
+      "path": "Gender/data/distribution/measure_info.json",
+      "md5": "501b641275bcb314267f4a4922434893",
+      "size": 1461
+    },
+    {
       "name": "ncr_trctbg_acs_20092020_gender_demographics.csv.xz",
       "path": "Gender/data/distribution/ncr_trctbg_acs_20092020_gender_demographics.csv.xz",
       "md5": "30e7d3cc2ce155c579144cd7530156e4",
@@ -175,6 +187,12 @@
       "size": 356108
     },
     {
+      "name": "measure_info.json",
+      "path": "Age/data/distribution/measure_info.json",
+      "md5": "f6695142a474ad9d76ab071b6dd8b9dc",
+      "size": 2315
+    },
+    {
       "name": "va_trctbg_acs_20092020_age_demographics.csv.xz",
       "path": "Age/data/distribution/va_trctbg_acs_20092020_age_demographics.csv.xz",
       "md5": "91d6487a4f073a4b2509961fe1d8338a",
@@ -203,6 +221,12 @@
       "path": "Race/data/distribution/ncr_trctbg_acs_20092020_race_demographics.csv.xz",
       "md5": "f13e69a0a69cb438f90b3ce599392f5a",
       "size": 539632
+    },
+    {
+      "name": "measure_info.json",
+      "path": "Race/data/distribution/measure_info.json",
+      "md5": "58b8d802226e80d3cc54a0af514a93fe",
+      "size": 3762
     },
     {
       "name": "va_trctbg_acs_20092020_race_demographics.csv.xz",

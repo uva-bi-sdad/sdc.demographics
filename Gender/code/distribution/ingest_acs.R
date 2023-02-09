@@ -102,7 +102,7 @@ acs_data_va <- acs_data_va_wd %>%
   mutate(measure_type=case_when(
     grepl('pop',measure)==T ~ "count",
     grepl('perc',measure)==T ~ "percentage"),
-         MOE='')
+    MOE='')
 
 
 #2. Age distribution afor NCR
@@ -145,7 +145,5 @@ acs_data_ncr <- merge(acs_data_ncr, ncr_geo, by.x=c('geoid','region_type','year'
 savepath = "Gender/data/distribution/"
 readr::write_csv(acs_data_va, xzfile(paste0(savepath,"va_trctbg_acs_20092020_gender_demographics.csv.xz"), compression = 9))
 readr::write_csv(acs_data_ncr, xzfile(paste0(savepath,"ncr_trctbg_acs_20092020_gender_demographics.csv.xz"), compression = 9))
-
-
 
 

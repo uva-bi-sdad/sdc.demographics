@@ -46,8 +46,51 @@ DC_lot_blocks_wgs84 <- DC_lot_blocks_wgs84 %>%
 # remove the na GEOID
 DC_lot_blocks_wgs84 <- DC_lot_blocks_wgs84[!is.na(DC_lot_blocks_wgs84$GEOID),]
 
+
+
+
+# Create the parcel geoid -----------------------------------------------------------------
+# parcel ID (PARID) has different length, create a uniform length by replacing all spaces with 'x'.fill text in PARID to reach the max length(PARID) (which is 14)
+sf::sf_use_s2(FALSE)
+temp <- DC_lot_blocks_wgs84 %>%
+  mutate(SSL=str_replace_all(SSL," ","_"),
+         length=nchar(SSL),
+         SSL=str_pad(SSL, max(nchar(SSL)), side="left", pad="x"),
+         bg_geoid=substr(GEOID, 1, 12)) %>%
+  group_by(SSL,bg_geoid) %>%
+  summarise(liv_unit=sum(ACTIVE_RES_UNIT_COUNT, na.rm=T),
+            geometry = st_union(geometry))
+
+temp01 <- temp %>%
+  mutate(region_name=paste0("Suffixe Square Lot  ",SSL),
+         region_type="SSL",
+         year=format(Sys.Date(), "%Y"),
+         geoid=paste0(bg_geoid,SSL)) %>%
+  select(geoid,region_name,region_type,year,liv_unit)
+
+dc_ssl_geometry <- temp01 %>%
+  select(geoid,region_name,region_type,year)
+
+ssl_livunit <- setDT(temp01) %>%
+  select(geoid,liv_unit)
+
+
+# save the parcel geometry
+savepath = "Synthetic_population/Housing_units_distribution/DC/data/working/"
+st_write(dc_ssl_geometry, paste0(savepath,"dc_ssl_geometry.geojson"))
+zip(zipfile = paste0(savepath,"dc_ssl_geometry.geojson.zip"), files = paste0(savepath,"dc_ssl_geometry.geojson"))
+file.remove(paste0(savepath,"dc_ssl_geometry.geojson"))
+
+# save the living units distribution
+savepath = "Synthetic_population/Housing_units_distribution/DC/data/working/"
+readr::write_csv(ssl_livunit, xzfile(paste0(savepath,"dc011_sdad_ssl_bg_livingunits.csv.xz"), compression = 9))
+
+
+
+
+
 # compress and save the data 
-path = "population/DC/overall_DC/new_geography_synthetic/housing_units_distribution_method/ssl/data/working/"
+path = "population/DC/overall_DC/new_geography_synthetic/housing_units_distribution_method/DC/data/working/"
 st_write(DC_lot_blocks_wgs84, paste0(path,"DC_block_ssl.geojson"))
 zip(zipfile = paste0(path,"DC_block_ssl.geojson.zip"), files = paste0(path,"DC_block_ssl.geojson"))
 file.remove(paste0(path,"DC_block_ssl.geojson"))
