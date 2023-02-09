@@ -146,7 +146,7 @@ temp_tr2020 <- read_sf('https://raw.githubusercontent.com/uva-bi-sdad/sdc.geogra
 ncr_geo <- rbind(temp_bg2010,temp_bg2020,temp_ct2010,temp_ct2020,temp_tr2010,temp_tr2020) %>%
   rename(census_year=year)
 
-acs_data_ncr <- merge(acs_data_ncr, ncr_geo, by.x=c('geoid','region_type','year'), by.y=c('geoid','region_type','year'), all.y=T) %>%
+acs_data_ncr <- merge(acs_data_ncr, ncr_geo, by.x=c('geoid','region_type','census_year'), by.y=c('geoid','region_type','census_year'), all.y=T) %>%
   select(geoid,region_name,region_type,year,measure,value,MOE)
 
 
