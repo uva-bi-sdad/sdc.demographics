@@ -48,22 +48,28 @@ arl_acs2020 <- acs %>%
 
 
 # compute the demographic multiplier -------------------------------------------------
+# comments: a block group can have a set of parcels with a total of 0 living units, for those case we can refine the demographics informations. 
+#           Those cases are identified with a multiplier equals to NA. we exclude them
 temp <- parcel_livunit %>%
   mutate(bg_geo=as.numeric(substr(geoid, 1, 12))) %>%
   group_by(bg_geo) %>%
-  mutate(bg_unitcnt=sum(liv_unit),
+  mutate(bg_unitcnt=sum(liv_unit, na.rm=T),
          mult=liv_unit/bg_unitcnt) %>%
   rename(parid=geoid) %>%
+  filter(!is.na(mult)) %>%
   select(parid,bg_geo,mult)
 
 
 
+
 # compute the demographics at the parcels --------------------------------------------
-# note: may be not all block groups have been break into parcels
+# note: refine the demographics for block groups with the demographics informations
+#       - some block group in parcel_livunit doesn't match the acs (2010) but belong to acs (2020), remove them
 arl_parcel_dmg <- merge(arl_acs2010, temp, by.x='geoid', by.y='bg_geo', all.y=T) %>%
   mutate(value=mult*value,
          region_name=paste0('parcel ',parid),
          region_type='parcel') %>%
+  filter(!is.na(measure)) %>%
   select(geoid=parid,region_name,region_type,measure,value)
 
 

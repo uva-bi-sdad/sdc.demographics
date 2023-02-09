@@ -9,9 +9,25 @@ library(rjson)
 library(tidyr)
 library(readr)
 library(tidycensus)
+library(reprex)
 
 # load the broadband data at the block group -------------------
-downloadspeed <- read_csv('https://github.com/uva-bi-sdad/sdc.broadband/blob/ceeee700b1ae2ef64f8993b8fbb27af3ff21aba7/Wired/Accessibility/Average%20Download%20Speed/data/distribution/ncr_hdcttrbg_2019_2021q3_speed_measurements.csv.xz?raw=T') 
+# download the file and read it
+temp <- tempfile()
+url = 'https://github.com/uva-bi-sdad/sdc.broadband/raw/main/Wired/Accessibility/Average%20Download%20Speed/data/distribution/ncr_hdcttrbg_2019_2021q3_speed_measurements.csv.xz'
+download.file(url,temp)
+data <- read_csv(temp)
+unlink(temp)
+
+unz(temp, "Synthetic_population/Housing_units_distribution/Fairfax/data/working/downloadspeed.csv")
+
+
+download.file(url, "Synthetic_population/Housing_units_distribution/Fairfax/data/working/downloadspeed.csv.xz", mode = "wb")
+downloadspeed <- read_csv("https://github.com/uva-bi-sdad/sdc.broadband/raw/main/Wired/Accessibility/Average%20Download%20Speed/data/distribution/ncr_hdcttrbg_2019_2021q3_speed_measurements.csv.xz")
+  
+  
+downloadspeed <- read_csv('https://github.com/uva-bi-sdad/sdc.broadband/blob/ceeee700b1ae2ef64f8993b8fbb27af3ff21aba7/Wired/Accessibility/Average%20Download%20Speed/data/distribution/ncr_hdcttrbg_2019_2021q3_speed_measurements.csv.xz')
+
 uploadspeed <- read_csv('https://github.com/uva-bi-sdad/sdc.broadband/blob/ceeee700b1ae2ef64f8993b8fbb27af3ff21aba7/Wired/Accessibility/Average%20Download%20Speed/data/distribution/ncr_hdcttrbg_2019_2021q3_speed_measurements.csv.xz?raw=T') 
 devices <- read_csv('https://github.com/uva-bi-sdad/sdc.broadband/blob/ceeee700b1ae2ef64f8993b8fbb27af3ff21aba7/Wired/Accessibility/Average%20Download%20Speed/data/distribution/ncr_hdcttrbg_2019_2021q3_speed_measurements.csv.xz?raw=T') 
 broadband <- rbind(downloadspeed,uploadspeed,devices)
