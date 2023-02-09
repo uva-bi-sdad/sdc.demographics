@@ -1,7 +1,7 @@
 # Broadband estimation at the smallest geographic area (parcels)
 
 
-# libraries ----------------------------------------------------
+# libraries -------------------------------------------------------------------------------------
 library(dplyr)
 library(sf)
 library(httr)
@@ -11,25 +11,27 @@ library(readr)
 library(tidycensus)
 library(reprex)
 
-# load the broadband data at the block group -------------------
+
+# load the broadband data at the block group -----------------------------------------------------
 # download the file and read it
 temp <- tempfile()
 url = 'https://github.com/uva-bi-sdad/sdc.broadband/raw/main/Wired/Accessibility/Average%20Download%20Speed/data/distribution/ncr_hdcttrbg_2019_2021q3_speed_measurements.csv.xz'
 download.file(url,temp)
-data <- read_csv(temp)
+downloadspeed <- read_csv(temp)
 unlink(temp)
 
-unz(temp, "Synthetic_population/Housing_units_distribution/Fairfax/data/working/downloadspeed.csv")
+temp <- tempfile()
+url = 'https://github.com/uva-bi-sdad/sdc.broadband/raw/main/Wired/Accessibility/Average%20Upload%20Speed/data/distribution/ncr_hdcttrbg_2019_2021q3_speed_measurements.csv.xz'
+download.file(url,temp)
+uploadspeed <- read_csv(temp)
+unlink(temp)
 
+temp <- tempfile()
+url = 'https://github.com/uva-bi-sdad/sdc.broadband/raw/main/Wired/Accessibility/Number%20of%20devices/data/distribution/ncr_hdcttrbg_2019_2021q3_speed_measurements.csv.xz'
+download.file(url,temp)
+devices <- read_csv(temp)
+unlink(temp)
 
-download.file(url, "Synthetic_population/Housing_units_distribution/Fairfax/data/working/downloadspeed.csv.xz", mode = "wb")
-downloadspeed <- read_csv("https://github.com/uva-bi-sdad/sdc.broadband/raw/main/Wired/Accessibility/Average%20Download%20Speed/data/distribution/ncr_hdcttrbg_2019_2021q3_speed_measurements.csv.xz")
-  
-  
-downloadspeed <- read_csv('https://github.com/uva-bi-sdad/sdc.broadband/blob/ceeee700b1ae2ef64f8993b8fbb27af3ff21aba7/Wired/Accessibility/Average%20Download%20Speed/data/distribution/ncr_hdcttrbg_2019_2021q3_speed_measurements.csv.xz')
-
-uploadspeed <- read_csv('https://github.com/uva-bi-sdad/sdc.broadband/blob/ceeee700b1ae2ef64f8993b8fbb27af3ff21aba7/Wired/Accessibility/Average%20Download%20Speed/data/distribution/ncr_hdcttrbg_2019_2021q3_speed_measurements.csv.xz?raw=T') 
-devices <- read_csv('https://github.com/uva-bi-sdad/sdc.broadband/blob/ceeee700b1ae2ef64f8993b8fbb27af3ff21aba7/Wired/Accessibility/Average%20Download%20Speed/data/distribution/ncr_hdcttrbg_2019_2021q3_speed_measurements.csv.xz?raw=T') 
 broadband <- rbind(downloadspeed,uploadspeed,devices)
 
 # load the parcel data
