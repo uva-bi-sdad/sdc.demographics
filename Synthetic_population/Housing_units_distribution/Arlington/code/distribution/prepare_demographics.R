@@ -24,7 +24,8 @@ parcel_livunit <- read.csv(paste0(uploadpath,"va013_sdad_parcel_bg_livingunits.c
 acs_age <- read.csv("Age/data/distribution/va_trctbg_acs_20092020_age_demographics.csv.xz") %>% filter(region_type=='block group')
 acs_gender <- read.csv("Gender/data/distribution/va_trctbg_acs_20092020_gender_demographics.csv.xz") %>% filter(region_type=='block group') %>% filter(!(measure=='total_pop'))
 acs_race <- read.csv("Race/data/distribution/va_trctbg_acs_20092020_race_demographics.csv.xz") %>% filter(region_type=='block group') %>% filter(!(measure=='total_pop'))
-acs <- rbind(acs_age,acs_gender,acs_race)
+acs_language <- read.csv("Language/data/distribution/va_trctbg_acs_20092020_language_demographics.csv.xz") %>% filter(region_type=='block group')
+acs <- rbind(acs_age,acs_gender,acs_race,acs_language)
 
 
 

@@ -16,7 +16,7 @@
     "/home/runner/work/sdc.demographics_dev/sdc.demographics_dev/Race/data/distribution/va_trctbg_acs_20092020_race_demographics.csv.xz"
   ],
   "count": 45,
-  "utc_audited": "2023-02-09 17:43:30",
+  "utc_audited": "2023-02-09 21:36:43",
   "data": [
     {
       "name": "temp",
@@ -45,8 +45,8 @@
     {
       "name": "prepare_broadband.R",
       "path": "Synthetic_population/Housing_units_distribution/Fairfax/code/distribution/prepare_broadband.R",
-      "md5": "bbcb02dafca278a89ddf69d1e397b677",
-      "size": 2748
+      "md5": "1909776b31235a6d901a34106a98acd2",
+      "size": 3750
     },
     {
       "name": "temp",
@@ -273,8 +273,8 @@
     {
       "name": "ingest_acs.R",
       "path": "Race/code/distribution/ingest_acs.R",
-      "md5": "07adf6b60ddc36a17fc84571cfec9839",
-      "size": 6688
+      "md5": "32d8ed6b7e06b5e4223860042eff6cb0",
+      "size": 6702
     },
     {
       "name": "prepare_newgeography.R",
