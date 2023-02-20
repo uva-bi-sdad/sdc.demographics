@@ -6,15 +6,15 @@
   "long_name": "Native population (percent)",
   "short_description": "The Native population population percent. Based on American Community Survey ACS 2015/2019 5-year estimates.",
   "short_name": "Native population",
+  "statement": "The Native population is {value} in {features.name}.",
+  "type": "percent",
   "sources": [
     {
       "date_accessed": 2023,
       "name": "American Community Survey Table B01001",
       "url": "https://www.census.gov/programs-surveys/acs.html"
     }
-  ],
-  "statement": "The Native population is {value} in {features.name}.",
-  "type": "percent"
+  ]
 },
   "perc_wht_alone": {
   "category": "Demographics",
@@ -23,15 +23,15 @@
   "long_name": "White population (percent)",
   "short_description": "The White population population percent. Based on American Community Survey ACS 2015/2019 5-year estimates.",
   "short_name": "White population",
+  "statement": "The White population is {value} in {features.name}.",
+  "type": "percent",
   "sources": [
     {
       "date_accessed": 2023,
       "name": "American Community Survey Table B01001",
       "url": "https://www.census.gov/programs-surveys/acs.html"
     }
-  ],
-  "statement": "The White population is {value} in {features.name}.",
-  "type": "percent"
+  ]
 },
   "perc_hispanic_or_latino": {
   "category": "Demographics",
@@ -40,15 +40,14 @@
   "long_name": "Hispanic/Latino population (percent)",
   "short_description": "The Hispanic/Latino population population percent. Based on American Community Survey ACS 2015/2019 5-year estimates.",
   "short_name": "Hispanic/Latino population",
+  "statement": "The Hispanic/Latino population is {value} in {features.name}.",
   "sources": [
     {
       "date_accessed": 2023,
       "name": "American Community Survey Table B01001",
       "url": "https://www.census.gov/programs-surveys/acs.html"
     }
-  ],
-  "statement": "The Hispanic/Latino population is {value} in {features.name}.",
-  "type": "percent"
+  ]
 },
   "perc_AAPI": {
   "category": "Demographics",
@@ -57,15 +56,15 @@
   "long_name": "Asian American/Pacific Islander population (percent)",
   "short_description": "The Asian American/Pacific Islander population population percent. Based on American Community Survey ACS 2015/2019 5-year estimates.",
   "short_name": "Asian American/Pacific Islander population",
+  "statement": "The Asian American/Pacific Islander population is {value} in {features.name}.",
+  "type": "percent",
   "sources": [
     {
       "date_accessed": 2023,
       "name": "American Community Survey Table B01001",
       "url": "https://www.census.gov/programs-surveys/acs.html"
     }
-  ],
-  "statement": "The Asian American/Pacific Islander population is {value} in {features.name}.",
-  "type": "percent"
+  ]
 },
   "perc_afr_amer_alone": {
     "category": "Demographics",
