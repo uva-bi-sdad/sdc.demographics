@@ -26,7 +26,7 @@
   "short_description": "The percent of females in population. Based on American Community Survey ACS 2010/2021 5-year estimates.",
   "short_name": "Female population",
   "statement": "The female population is {value} in {features.name}.",
-  "type": "percent"
+  "type": "percent",
   "sources": [
     {
       "date_accessed": 2023,
@@ -62,7 +62,7 @@
   "short_description": "The count of females in population. Based on American Community Survey ACS 2010/2021 5-year estimates.",
   "short_name": "Female population",
   "statement": "The female population is {value} in {features.name}.",
-  "type": "count"
+  "type": "count",
   "sources": [
     {
       "date_accessed": 2023,
