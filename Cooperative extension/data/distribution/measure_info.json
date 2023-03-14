@@ -1,5 +1,5 @@
 {
-  "demographics:perc_male":{
+  "perc_male":{
     "category": "Demographics",
     "measure_table" : "va_cttr_2010_2021_perc_male",
     "full_name": "demographics:perc_male",
