@@ -24,7 +24,7 @@
     "/home/runner/work/sdc.demographics_dev/sdc.demographics_dev/Age/data/distribution/ncr_trctbg_acs_20092020_age_demographics.csv.xz"
   ],
   "count": 61,
-  "utc_audited": "2023-03-14 22:39:13",
+  "utc_audited": "2023-03-14 22:45:39",
   "data": [
     {
       "name": "temp",
@@ -65,8 +65,8 @@
     {
       "name": "measure_info.json",
       "path": "Gender/data/distribution/measure_info.json",
-      "md5": "7ccdbb36935d6abf7c70a70747d814fd",
-      "size": 3706
+      "md5": "06d73f9e30548deffca9e1ea6f08678b",
+      "size": 4688
     },
     {
       "name": "ncr_trctbg_acs_20092020_gender_demographics.csv.xz",
@@ -119,8 +119,8 @@
     {
       "name": "measure_info.json",
       "path": "Race/data/distribution/measure_info.json",
-      "md5": "a589d35e35a92434986aae9a3669b894",
-      "size": 12742
+      "md5": "5aa20f8829d33c963b87672f759de419",
+      "size": 15446
     },
     {
       "name": "temp",
@@ -167,8 +167,8 @@
     {
       "name": "measure_info.json",
       "path": "Language/data/distribution/measure_info.json",
-      "md5": "47b5ef7a447ffa1120b380a9327bf2f7",
-      "size": 2443
+      "md5": "e0bbac642caa0f0aeb31f8a0eb28fa72",
+      "size": 2954
     },
     {
       "name": "temp",
@@ -191,8 +191,8 @@
     {
       "name": "measure_info.json",
       "path": "Cooperative extension/data/distribution/measure_info.json",
-      "md5": "52eb0a7705510abd339c79bd87dbaf88",
-      "size": 877
+      "md5": "1eab7ad7088d3064d0c0fe6e6db00705",
+      "size": 1056
     },
     {
       "name": "temp",
@@ -335,8 +335,8 @@
     {
       "name": "measure_info.json",
       "path": "Veteran/data/distribution/measure_info.json",
-      "md5": "8dc4f4a35bc8133cfec2d539df22b49b",
-      "size": 1538
+      "md5": "686019cf178e4cababd9a69511928dc7",
+      "size": 1878
     },
     {
       "name": "va013_civic_sdad_20132020_veteran_demographics.csv.xz",
@@ -377,8 +377,8 @@
     {
       "name": "measure_info.json",
       "path": "Age/data/distribution/measure_info.json",
-      "md5": "b75a8471a16d66788be8935ab267cbb3",
-      "size": 5408
+      "md5": "61a0e7ca1e35bc4f2514cc7c3bbbf785",
+      "size": 6738
     },
     {
       "name": "va013_civic_sdad_20132020_age_demographics.csv.xz",
