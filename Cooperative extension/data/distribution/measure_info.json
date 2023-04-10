@@ -24,12 +24,12 @@
     "perc_children_raised_by_GPs": {
         "category": "Demographics",
         "citations": "",
-        "data_type": "",
-        "equity_category": "",
+        "data_type": "numeric",
+        "equity_category": "State",
         "layer": "",
         "long_description": "The percent of children in the population being raised by their grandparents. Based on American Community Survey 2010/2021 5-year estimates.",
-        "long_name": "",
-        "measure_type": "",
+        "long_name": "Children Raised by Grandparents (percent)",
+        "measure_type": "percent",
         "short_description": "The percent of children in the population being raised by their grandparents. Based on American Community Survey 2010/2021 5-year estimates.",
         "short_name": "Children Raised by Grandparents",
         "sources": [
