@@ -8,7 +8,7 @@
     "short_name": "{variant} using {category.name}-method",
     "long_name": "{variant.short_description}",
     "short_description": "{variant}",
-    "long_description": "{variant}. 5-year ACS estimates in provided census geolevels. For non-census geolevels (such as zip codes), spatial overlaps are calculated between census block groups {category}. Redistribution to non-census geolevels was performed using the redistribute R package.",
+    "long_description": "{variant} 5-year ACS estimates in provided census geolevels. For non-census geolevels (such as zip codes), spatial overlaps are calculated between census block groups {category} Redistribution to non-census geolevels was performed using the redistribute R package.",
     "statement": "{variant}",
     "sources": [
       {
@@ -20,7 +20,7 @@
       }
     ],
     "categories": {
-      "": {
+      "1": {
         "long_description": ""
       },
       "parcels": {
