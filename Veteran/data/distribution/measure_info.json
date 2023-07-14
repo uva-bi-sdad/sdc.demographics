@@ -14,7 +14,7 @@
         "short_name": "Veteran population",
         "sources": [
             {
-                "name": "American Community Survey Table B01001",
+                "name": "American Community Survey Table B21001",
                 "date_accessed": 2021,
                 "url": "https://www.census.gov/programs-surveys/acs.html"
             }
