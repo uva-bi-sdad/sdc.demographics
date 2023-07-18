@@ -102,6 +102,7 @@ model_parcels <- rbind(hsr_dmg,pd_dmg,sd_dmg,zc_dmg) %>%
   filter(!is.na(geoid)) %>%
   mutate(perc_hh_limited_english = 100*(hh_limited_english)/total_hh) %>%
   pivot_longer(!c('geoid','year'), names_to='measure', values_to='value') %>%
+  filter(!(measure=='total_hh')) %>%
   mutate(measure=paste0('language_',measure,'_parcels'),
     moe='')
 
