@@ -100,7 +100,7 @@ acs_data_va <- acs_data_va_wd %>%
   dplyr::select(geoid=GEOID,region_name=NAME,region_type,year,total_hh,hh_limited_english,perc_hh_limited_english) %>%
   gather(measure, value, -c(geoid, region_name, region_type, year)) %>%
   select(geoid,region_name,region_type,year,measure,value) %>%
-  mutate(measure=paste0('language_',measure,'_blank'),
+  mutate(measure=paste0('language_',measure,'_'),
          measure_type=case_when(
            grepl('perc',measure)==T ~ "percentage",
            grepl('hh',measure)==T ~ "count"),
@@ -116,7 +116,7 @@ acs_data_ncr <- acs_data_ncr_wd %>%
   dplyr::select(geoid=GEOID,region_name=NAME,region_type,year,total_hh,hh_limited_english,perc_hh_limited_english) %>%
   gather(measure, value, -c(geoid, region_name, region_type, year)) %>%
   select(geoid,region_name,region_type,year,measure,value) %>%
-  mutate(measure=paste0('language_',measure,'_blank'),
+  mutate(measure=paste0('language_',measure,'_'),
          measure_type=case_when(
            grepl('perc',measure)==T ~ "percentage",
            grepl('hh',measure)==T ~ "count"),

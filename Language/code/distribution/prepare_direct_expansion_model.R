@@ -31,7 +31,7 @@ acs_bg <- acs %>%
   filter(region_type=='block group') %>%
   filter(!str_detect(measure, "perc")) %>%
   select(geoid,year,measure,value) %>%
-  mutate(measure=str_remove_all(measure,paste(c('language_','_blank'), collapse = "|") )) %>%
+  mutate(measure=str_replace(substr(measure, 1, nchar(measure)-1),'language_','')) %>%
   pivot_wider(names_from = measure, values_from = value) %>%
   mutate(census_year=if_else(year<2020,2010,2020))
 

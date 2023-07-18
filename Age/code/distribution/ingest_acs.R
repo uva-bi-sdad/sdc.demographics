@@ -130,7 +130,7 @@ acs_data_va <- acs_data_va_wd %>%
   dplyr::select(geoid=GEOID,region_name=NAME,region_type,year,total_pop,pop_under_20,pop_20_64,pop_65_plus,perc_pop_under_20,perc_pop_20_64,perc_pop_65_plus) %>%
   gather(measure, value, -c(geoid, region_name, region_type, year)) %>%
   select(geoid,region_name,region_type,year,measure,value) %>%
-  mutate(measure=paste0('age_',measure,'_blank'),
+  mutate(measure=paste0('age_',measure,'_'),
          measure_type=case_when(
            grepl('perc',measure)==T ~ "percentage",
            grepl('pop',measure)==T ~ "count"),
@@ -154,7 +154,7 @@ acs_data_ncr <- acs_data_ncr_wd %>%
   dplyr::select(geoid=GEOID,region_name=NAME,region_type,year,total_pop,pop_under_20,pop_20_64,pop_65_plus,perc_pop_under_20,perc_pop_20_64,perc_pop_65_plus) %>%
   gather(measure, value, -c(geoid, region_name, region_type, year)) %>%
   select(geoid,region_name,region_type,year,measure,value) %>%
-  mutate(measure=paste0('age_',measure,'_blank'),
+  mutate(measure=paste0('age_',measure,'_'),
          measure_type=case_when(
            grepl('perc',measure)==T ~ "percentage",
            grepl('pop',measure)==T ~ "count"),
@@ -183,8 +183,8 @@ acs_data_ncr <- merge(acs_data_ncr, ncr_geo, by.x=c('geoid','region_type','censu
 
 # Save the data ----------------------------------------------------------------------------------
 savepath = "Age/data/distribution/"
-readr::write_csv(acs_data_va, xzfile(paste0(savepath,"va_cttrbg_acs_",min(years),'_',max(years),"_age_demographics.csv.xz"), compression = 9))
-readr::write_csv(acs_data_ncr, xzfile(paste0(savepath,"ncr_cttrbg_acs_",min(years),'_',max(years),"_age_demographics.csv.xz"), compression = 9))
+readr::write_csv(acs_data_va, xzfile(paste0(savepath,"va_cttrbg_acs_",min(years),"_",max(years),"_age_demographics.csv.xz"), compression = 9))
+readr::write_csv(acs_data_ncr, xzfile(paste0(savepath,"ncr_cttrbg_acs_",min(years),"_",max(years),"_age_demographics.csv.xz"), compression = 9))
 
 
 

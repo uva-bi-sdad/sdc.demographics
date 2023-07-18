@@ -134,7 +134,7 @@ acs_data_va <- acs_data_va_wd %>%
                 perc_hispanic_or_latino) %>%
   gather(measure, value, -c(geoid, region_name, region_type, year)) %>%
   select(geoid,region_name,region_type,year,measure,value) %>%
-  mutate(measure=paste0('race_',measure,'_blank'),
+  mutate(measure=paste0('race_',measure,'_'),
          measure_type=case_when(
     grepl('perc',measure)==T ~ "percentage",
     grepl('pop',measure)==T ~ "count",
@@ -180,7 +180,7 @@ acs_data_ncr <- acs_data_ncr_wd %>%
                 perc_hispanic_or_latino) %>%
   gather(measure, value, -c(geoid, region_name, region_type, year)) %>%
   select(geoid,region_name,region_type,year,measure,value) %>%
-  mutate(measure=paste0('race_',measure,'_blank'),
+  mutate(measure=paste0('race_',measure,'_'),
          measure_type=case_when(
     grepl('perc',measure)==T ~ "percentage",
     grepl('pop',measure)==T ~ "count",
