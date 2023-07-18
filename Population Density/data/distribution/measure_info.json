@@ -1,0 +1,23 @@
+{
+  "pop_density_indicator": {
+    "category": "Demographics",
+    "data_type": "index",
+    "unit": "individual",
+    "equity_category": "Status",
+    "aggregation_method": "arithmetic mean",
+    "short_name": "Population Density Indicator",
+    "long_name": "Population Density Indicator",
+    "short_description": "Population Density Indicator",
+    "long_description": "Population Density Indicator",
+    "statement": "The population weighted density index is {value} in {region_name}.",
+    "sources": [
+      {
+        "name": "American Community Survey",
+        "location": "5-Year estimates, table B01003, via the API",
+        "location_url": "https://www.census.gov/data/developers/data-sets/acs-5year.html",
+        "date_accessed": 2023,
+        "url": "https://www.census.gov/programs-surveys/acs.html"
+      }
+    ]
+  }
+}
