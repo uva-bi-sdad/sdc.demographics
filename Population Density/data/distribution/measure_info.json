@@ -1,5 +1,5 @@
 {
-  "pop_density_indicator": {
+  "Population_weighted_density_index": {
     "category": "Demographics",
     "data_type": "index",
     "unit": "individual",
