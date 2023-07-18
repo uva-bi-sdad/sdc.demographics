@@ -102,6 +102,7 @@ model_parcels <- rbind(hsr_dmg,pd_dmg,sd_dmg,zc_dmg) %>%
   filter(!is.na(geoid)) %>%
   mutate(perc_veteran = 100*pop_veteran/pop_vet_denom) %>%
   pivot_longer(!c('geoid','year'), names_to='measure', values_to='value') %>%
+  filter(!(measure=='pop_vet_denom')) %>%
   mutate(measure=paste0('veteran_',measure,'_parcels'),
     moe='')
 

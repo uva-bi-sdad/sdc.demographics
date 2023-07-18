@@ -79,7 +79,7 @@
       },
       "total_pop": {
         "default": "Total count of the population",
-        "data_type": "integer",
+        "data_type": "decimal",
         "aggregation_method": "arithmetic mean",
         "short_description": "Total count of the population. Based on American Community Survey ACS 2015/2019 5-year estimates.",
         "long_description": "Total count of the population.",
