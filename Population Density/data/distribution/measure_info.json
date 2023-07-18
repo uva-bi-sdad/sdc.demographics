@@ -1,15 +1,15 @@
 {
   "Population_weighted_density_index": {
     "category": "Demographics",
-    "data_type": "index",
-    "unit": "individual",
+    "data_type": "ratio",
+    "unit": "individuals per mile",
     "equity_category": "Status",
-    "aggregation_method": "arithmetic mean",
-    "short_name": "Population Density Indicator",
-    "long_name": "Population Density Indicator",
-    "short_description": "Population Density Indicator",
-    "long_description": "Population Density Indicator",
-    "statement": "The population weighted density index is {value} in {region_name}.",
+    "aggregation_method": "other",
+    "short_name": "Population Density Per Sq Mile",
+    "long_name": "Population Density Per Sq Mile",
+    "short_description": "Population Density Per Sq Mile",
+    "long_description": "Population Density Per Sq Mile",
+    "statement": "The population weighted density per square mile is {value} in {region_name}.",
     "sources": [
       {
         "name": "American Community Survey",
