@@ -56,11 +56,11 @@ for (vyear in yearlist){
   
   # we use the parcel distribution of 2022 for all acs demographics from 2013-2022.
   if (vyear<=2022){
-    parcel_geo <- st_read("Synthetic_population/Housing_units_distribution/Fairfax/data/working/parcels_infos/2022/fairfax_parcel_geometry.geojson")
+    parcel_geo <- readRDS("Synthetic_population/Housing_units_distribution/Fairfax/data/working/parcels_infos/2022/fairfax_parcel_geometry.rds")
     fairfax_pc_geo <- parcel_geo %>% select(parid=geoid, geometry)
   }else{
-    parcel_geo <- st_read(paste0("Synthetic_population/Housing_units_distribution/Fairfax/data/working/parcels_infos/",vyear,"/fairfax_parcel_geometry.geojson"))
-    fairfax_pc_geo <- parcel_geo %>% select(parid=geoid, geometry)
+    #parcel_geo <- st_read(paste0("Synthetic_population/Housing_units_distribution/Fairfax/data/working/parcels_infos/",vyear,"/fairfax_parcel_geometry.geojson"))
+    #fairfax_pc_geo <- parcel_geo %>% select(parid=geoid, geometry)
   }
   
   # add geometry to the acs

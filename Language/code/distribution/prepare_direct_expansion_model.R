@@ -30,7 +30,7 @@ acs <- read.csv(paste0(uploadpath,filename))
 acs_bg <- acs %>%
   filter(region_type=='block group') %>%
   select(geoid,year,measure,value) %>%
-  mutate(measure=str_replace(substr(measure, 1, nchar(measure)-1),'language_','')) %>%
+  mutate(measure=str_replace(measure,'language_','')) %>%
   pivot_wider(names_from = measure, values_from = value) %>%
   mutate(total_hh =100*hh_limited_english/perc_hh_limited_english, 
          census_year=if_else(year<2020,2010,2020)) 
