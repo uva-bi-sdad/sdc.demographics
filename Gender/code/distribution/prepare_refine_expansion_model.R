@@ -162,8 +162,7 @@ for (year in years) {
   arl_pc_dmg <- rbind(arl_pc_dmg,temp)
 }
 
-arl_pc_geo <- sf::st_read(unzip("Synthetic_population/Housing_units_distribution/Arlington/data/working/arl_parcel_geometry.geojson.zip", "Synthetic_population/Housing_units_distribution/Arlington/data/working/arl_parcel_geometry.geojson"))
-file.remove("Synthetic_population/Housing_units_distribution/Arlington/data/working/arl_parcel_geometry.geojson")
+arl_pc_geo <- sf::st_read("Synthetic_population/Housing_units_distribution/Arlington/data/working/va_arl_parcel_geometry.geojson")
 arl_pc_geo <- arl_pc_geo %>% select(parid=geoid, geometry)
 arl_pc_dmg <- arl_pc_dmg %>% select(geoid,year,measure,value) %>% filter(measure %in% c('pop_male','pop_female','total_pop'))
 
@@ -171,7 +170,7 @@ arl_pc_dmg <- arl_pc_dmg %>% select(geoid,year,measure,value) %>% filter(measure
 sf::sf_use_s2(FALSE)
 civic_geo <- sf::st_read("https://raw.githubusercontent.com/uva-bi-sdad/sdc.geographies/main/VA/Local%20Geographies/Arlington%20County/Civic%20Associations/2021/data/distribution/va013_geo_arl_2021_civic_associations.geojson")
 
-# coments: for some cases the number of rows can be lower than the number of parcels meaning that the new geography doesn't cover all the parcels
+# comments: for some cases the number of rows can be lower than the number of parcels meaning that the new geography doesn't cover all the parcels
 civic_pc_map <- st_join(civic_geo, arl_pc_geo, join = st_intersects) %>% st_drop_geometry() %>% select(-year)
 
 # estimate the demographics for the new geography. all the 
@@ -185,10 +184,11 @@ arl_newgeo_dmg <- civic_dmg %>%
   mutate(perc_male = 100*pop_male/total_pop,
          perc_female = 100*pop_female/total_pop) %>%
   pivot_longer(!c('geoid','region_name','region_type','year'), names_to='measure', values_to='value') %>%
-  mutate(measure_type=case_when(
-    grepl('pop',measure)==T ~ "count",
-    grepl('perc',measure)==T ~ "percentage"),
-    MOE='')
+  mutate(measure=paste0('gender_',measure,'_direct'),
+         measure_type=case_when(
+          grepl('pop',measure)==T ~ "count",
+          grepl('perc',measure)==T ~ "percentage"),
+        moe='')
 
 # save the data ----------------------------------------------------------------------------------
 savepath = "Gender/data/distribution/"

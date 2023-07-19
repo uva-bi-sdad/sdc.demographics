@@ -162,8 +162,7 @@ for (year in years) {
   arl_pc_dmg <- rbind(arl_pc_dmg,temp)
 }
 
-arl_pc_geo <- sf::st_read(unzip("Synthetic_population/Housing_units_distribution/Arlington/data/working/arl_parcel_geometry.geojson.zip", "Synthetic_population/Housing_units_distribution/Arlington/data/working/arl_parcel_geometry.geojson"))
-file.remove("Synthetic_population/Housing_units_distribution/Arlington/data/working/arl_parcel_geometry.geojson")
+arl_pc_geo <- sf::st_read("Synthetic_population/Housing_units_distribution/Arlington/data/working/va_arl_parcel_geometry.geojson")
 arl_pc_geo <- arl_pc_geo %>% select(parid=geoid, geometry)
 
 
@@ -185,10 +184,11 @@ arl_newgeo_dmg <- civic_dmg %>%
   mutate(perc_veteran = 100*pop_veteran/pop_vet_denom) %>%
   select(geoid,region_name,region_type,year,pop_veteran,perc_veteran) %>%
   pivot_longer(!c('geoid','region_name','region_type','year'), names_to='measure', values_to='value') %>%
-  mutate(measure_type=case_when(
-    grepl('perc',measure)==T ~ "percentage",
-    grepl('pop',measure)==T ~ "count"),
-    moe='')
+  mutate(measure=paste0('veteran_',measure,'_direct'),
+         measure_type=case_when(
+          grepl('perc',measure)==T ~ "percentage",
+          grepl('pop',measure)==T ~ "count"),
+         moe='')
 
 
 # save the data ----------------------------------------------------------------------------------

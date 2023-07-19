@@ -162,10 +162,8 @@ for (year in years) {
   arl_pc_dmg <- rbind(arl_pc_dmg,temp)
 }
 
-arl_pc_geo <- sf::st_read(unzip("Synthetic_population/Housing_units_distribution/Arlington/data/working/arl_parcel_geometry.geojson.zip", "Synthetic_population/Housing_units_distribution/Arlington/data/working/arl_parcel_geometry.geojson"))
-file.remove("Synthetic_population/Housing_units_distribution/Arlington/data/working/arl_parcel_geometry.geojson")
+arl_pc_geo <- sf::st_read("Synthetic_population/Housing_units_distribution/Arlington/data/working/va_arl_parcel_geometry.geojson")
 arl_pc_geo <- arl_pc_geo %>% select(parid=geoid, geometry)
-
 
 # upload new geographies and mapping with parcels (comments: just add a new geography below and the intersects with parcels)
 sf::sf_use_s2(FALSE)
@@ -184,10 +182,11 @@ arl_newgeo_dmg <- civic_dmg %>%
   filter(!is.na(geoid)) %>%
   mutate(perc_hh_limited_english = 100*(hh_limited_english)/total_hh) %>%
   pivot_longer(!c('geoid','region_name','region_type','year'), names_to='measure', values_to='value') %>%
-  mutate(measure_type=case_when(
-    grepl('perc',measure)==T ~ "percentage",
-    grepl('hh',measure)==T ~ "count"),
-    MOE='')
+  mutate(measure=paste0('language_',measure,'_direct'),
+         measure_type=case_when(
+          grepl('perc',measure)==T ~ "percentage",
+          grepl('hh',measure)==T ~ "count"),
+        moe='')
 
 
 # save the data ----------------------------------------------------------------------------------

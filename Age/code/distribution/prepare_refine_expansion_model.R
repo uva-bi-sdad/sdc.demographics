@@ -158,15 +158,14 @@ years <- 2013:2020
 
 # upload data from arlington (demography and geometry). filter on age
 for (year in years) {
-  temp0 <- read_csv(xzfile(paste0("Synthetic_population/Housing_units_distribution/Arlington/data/working/va013_pc_sdad_",year,"_demographics.csv.xz")))
+  temp0 <- read_csv(paste0("Synthetic_population/Housing_units_distribution/Arlington/data/working/va013_pc_sdad_",year,"_demographics.csv.xz"))
   temp <- temp0 %>% select(geoid,year,measure,value) %>% filter(measure %in% c('pop_under_20','pop_20_64','pop_65_plus','total_pop'))
   arl_pc_dmg <- rbind(arl_pc_dmg,temp)
 }
 
 
 #arl_pc_dmg <- read_csv(xzfile("Synthetic_population/Housing_units_distribution/Arlington/data/working/va013_pc_sdad_20092019_demographics.csv.xz"))
-arl_pc_geo <- sf::st_read(unzip("Synthetic_population/Housing_units_distribution/Arlington/data/working/arl_parcel_geometry.geojson.zip", "Synthetic_population/Housing_units_distribution/Arlington/data/working/arl_parcel_geometry.geojson"))
-file.remove("Synthetic_population/Housing_units_distribution/Arlington/data/working/arl_parcel_geometry.geojson")
+arl_pc_geo <- sf::st_read("Synthetic_population/Housing_units_distribution/Arlington/data/working/va_arl_parcel_geometry.geojson")
 arl_pc_geo <- arl_pc_geo %>% select(parid=geoid, geometry)
 
 # upload new geographies and mapping with parcels (comments: just add a new geography below and the intersects with parcels)
@@ -188,10 +187,11 @@ arl_newgeo_dmg <- civic_dmg %>%
          perc_pop_20_64 = 100*pop_20_64/total_pop,
          perc_pop_65_plus = 100*pop_65_plus/total_pop) %>%
   pivot_longer(!c('geoid','region_name','region_type','year'), names_to='measure', values_to='value') %>%
-  mutate(measure_type=case_when(
-    grepl('perc',measure)==T ~ "percentage",
-    grepl('pop',measure)==T ~ "count"),
-    MOE='')
+  mutate(measure=paste0('age_',measure,'_direct'),
+         measure_type=case_when(
+          grepl('perc',measure)==T ~ "percentage",
+          grepl('pop',measure)==T ~ "count"),
+        moe='')
 
 
 # save the data ----------------------------------------------------------------------------------
