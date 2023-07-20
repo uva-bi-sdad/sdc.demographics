@@ -12,7 +12,7 @@ library(httr)
 library(sp)
 library(data.table)
 library(stringr)
-library("rgdal", lib.loc="/usr/local/lib/R/site-library")
+#library("rgdal", lib.loc="/usr/local/lib/R/site-library")
 library(tidyr)
 library(readr)
 library(tidyverse)
@@ -103,45 +103,62 @@ model_parcels <- rbind(hsr_dmg,pd_dmg,sd_dmg,zc_dmg) %>%
   mutate(perc_male = 100*pop_male/total_pop,
          perc_female = 100*pop_female/total_pop) %>%
   pivot_longer(!c('geoid','year'), names_to='measure', values_to='value') %>%
-  mutate(measure=paste0('gender_',measure,'_parcels'),
+  mutate(
+    #measure=paste0('gender_',measure,'_parcels'),
     moe='')
+
+
+# get the acs data ----------------------------------------------
+uploadpath = "Gender/data/distribution/"
+files = list.files(uploadpath)
+filename = files[str_detect(files,"va_cttrbg_acs")]
+temp_acs_dmg <- read.csv(paste0(uploadpath,filename)) %>% 
+  select(geoid,year,measure,value,moe) 
+temp_parcels_dmg <- model_parcels 
+baseline_data <- rbind(temp_acs_dmg,temp_parcels_dmg) %>%
+  mutate(measure=paste0(measure,'_parcels'))
+
+
 
 
 # save the data 
 savepath = "Gender/data/distribution/"
-files = list.files(savepath)
-filename = files[str_detect(files,"va059_hsrsdpdzc_sdad")]
+readr::write_csv(baseline_data, xzfile(paste0(savepath,"va_hsrsdpdzccttrbg_sdad_",min(yearlist),'_',max(yearlist),"_gender_demographics2.csv.xz"), compression = 9))
 
-if (length(filename)==0){
-  # create the file
-  readr::write_csv(model_parcels, xzfile(paste0(savepath,"va059_hsrsdpdzc_sdad_",min(yearlist),'_',max(yearlist),"_gender_demographics.csv.xz"), compression = 9))
-  
-}else{
-  # there is only one file perform check to whether replace the file or update the content
-  file_maxyear = as.numeric(substr(filename,27,30))
-  if(max(yearlist)!=file_maxyear){
-    # update filename
-    file.remove(filename)
-    readr::write_csv(model_parcels, xzfile(paste0(savepath,"va059_hsrsdpdzc_sdad_",min(yearlist),'_',max(yearlist),"_gender_demographics.csv.xz"), compression = 9))
-    
-  }else{
-    #read the file, identify the model in those file 
-    lastfile <- read.csv(paste0(savepath,filename))
-    lastfile$model <- sapply(strsplit(lastfile$measure, split= "_", fixed = TRUE), tail, 1L)
-    modellist <- unique(lastfile$model)
-    if ('parcels' %in% modellist){
-      # get the set of the other models listed in the data. keep other models and update the current model data
-      set <- lastfile %>% filter(model!='parcels') %>% select(geoid,year,measure,value,moe)
-      lastfile <- rbind(set, model_parcels)
-      readr::write_csv(lastfile, xzfile(paste0(savepath,"va059_hsrsdpdzc_sdad_",min(yearlist),'_',max(yearlist),"_gender_demographics.csv.xz"), compression = 9))
-    }else{
-      # just add the current model data
-      set <- lastfile %>% select(geoid,year,measure,value,moe)
-      lastfile <- rbind(set, model_parcels)
-      readr::write_csv(lastfile, xzfile(paste0(savepath,"va059_hsrsdpdzc_sdad_",min(yearlist),'_',max(yearlist),"_gender_demographics.csv.xz"), compression = 9))
-    }
-  }
-}
+
+# files = list.files(savepath)
+# filename = files[str_detect(files,"va059_hsrsdpdzc_sdad")]
+# 
+# if (length(filename)==0){
+#   # create the file
+#   readr::write_csv(model_parcels, xzfile(paste0(savepath,"va059_hsrsdpdzc_sdad_",min(yearlist),'_',max(yearlist),"_gender_demographics.csv.xz"), compression = 9))
+#   
+# }else{
+#   # there is only one file perform check to whether replace the file or update the content
+#   file_maxyear = as.numeric(substr(filename,27,30))
+#   if(max(yearlist)!=file_maxyear){
+#     # update filename
+#     file.remove(filename)
+#     readr::write_csv(model_parcels, xzfile(paste0(savepath,"va059_hsrsdpdzc_sdad_",min(yearlist),'_',max(yearlist),"_gender_demographics.csv.xz"), compression = 9))
+#     
+#   }else{
+#     #read the file, identify the model in those file 
+#     lastfile <- read.csv(paste0(savepath,filename))
+#     lastfile$model <- sapply(strsplit(lastfile$measure, split= "_", fixed = TRUE), tail, 1L)
+#     modellist <- unique(lastfile$model)
+#     if ('parcels' %in% modellist){
+#       # get the set of the other models listed in the data. keep other models and update the current model data
+#       set <- lastfile %>% filter(model!='parcels') %>% select(geoid,year,measure,value,moe)
+#       lastfile <- rbind(set, model_parcels)
+#       readr::write_csv(lastfile, xzfile(paste0(savepath,"va059_hsrsdpdzc_sdad_",min(yearlist),'_',max(yearlist),"_gender_demographics.csv.xz"), compression = 9))
+#     }else{
+#       # just add the current model data
+#       set <- lastfile %>% select(geoid,year,measure,value,moe)
+#       lastfile <- rbind(set, model_parcels)
+#       readr::write_csv(lastfile, xzfile(paste0(savepath,"va059_hsrsdpdzc_sdad_",min(yearlist),'_',max(yearlist),"_gender_demographics.csv.xz"), compression = 9))
+#     }
+#   }
+# }
 
 
 
@@ -184,7 +201,7 @@ arl_newgeo_dmg <- civic_dmg %>%
   mutate(perc_male = 100*pop_male/total_pop,
          perc_female = 100*pop_female/total_pop) %>%
   pivot_longer(!c('geoid','region_name','region_type','year'), names_to='measure', values_to='value') %>%
-  mutate(measure=paste0('gender_',measure,'_direct'),
+  mutate(measure=paste0(measure,'_parcels'),
          measure_type=case_when(
           grepl('pop',measure)==T ~ "count",
           grepl('perc',measure)==T ~ "percentage"),
