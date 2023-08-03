@@ -169,7 +169,7 @@ baseline_data <- rbind(fx_newgeo_dmg,arl_newgeo_dmg)
 baseline_data <- baseline_data %>% 
   mutate(measure=case_when(
     measure=="hh_limited_english" ~ "language_hh_limited_english_count_parcels",
-    measure=="perc_hh_limited_english" ~ "langauge_hh_limited_english_percent_parcels")) %>%
+    measure=="perc_hh_limited_english" ~ "language_hh_limited_english_percent_parcels")) %>%
   filter(!is.na(value)) %>%
   mutate(geoid=as.character(geoid))
 

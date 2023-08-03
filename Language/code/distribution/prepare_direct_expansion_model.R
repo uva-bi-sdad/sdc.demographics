@@ -107,7 +107,7 @@ baseline_data <- rbind(temp_acs_dmg,temp_direct_dmg)
 baseline_data <- baseline_data %>% 
   mutate(measure=case_when(
     measure=="hh_limited_english" ~ "language_hh_limited_english_count_direct",
-    measure=="perc_hh_limited_english" ~ "langauge_hh_limited_english_percent_direct"))
+    measure=="perc_hh_limited_english" ~ "language_hh_limited_english_percent_direct"))
 
 
 # save the living units distribution ----------------------------------------------------------------------------
