@@ -19,7 +19,7 @@ library(redistribute)
 uploadpath = "Age/data/working/"
 files = list.files(uploadpath)
 filename = files[str_detect(files,"va_cttrbg_acs")]
-acs <- read.csv(paste0(uploadpath,filename))
+acs <- readRDS(paste0(uploadpath,filename))
 
 
 

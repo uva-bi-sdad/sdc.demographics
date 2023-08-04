@@ -116,7 +116,7 @@ model_parcels <- rbind(hsr_dmg,pd_dmg,sd_dmg,zc_dmg) %>%
 uploadpath = "Veteran/data/working/"
 files = list.files(uploadpath)
 filename = files[str_detect(files,"va_cttrbg_acs")]
-temp_acs_dmg <- read.csv(paste0(uploadpath,filename)) %>% 
+temp_acs_dmg <- readRDS(paste0(uploadpath,filename)) %>% 
   select(geoid,year,measure,value,moe) 
 temp_parcels_dmg <- model_parcels 
 fx_newgeo_dmg <- rbind(temp_acs_dmg,temp_parcels_dmg)  %>%

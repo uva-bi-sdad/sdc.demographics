@@ -23,7 +23,7 @@ library(redistribute)
 uploadpath = "Language/data/working/"
 files = list.files(uploadpath)
 filename = files[str_detect(files,"va_cttrbg_acs")]
-acs <- read.csv(paste0(uploadpath,filename))
+acs <- readRDS(paste0(uploadpath,filename))
 
 # prepare the data for modeling -------------------------------------------
 # select the census block group for aggregation, select only population count as measure

@@ -4,7 +4,7 @@
 source('Veteran/code/distribution/functions.R')
 
 # run this line to update the all/specific model
-run_data_prep('Veteran', ingest=FALSE, direct=FALSE, refine=TRUE)
+run_data_prep('Veteran', ingest=TRUE, direct=TRUE, refine=TRUE)
 
 # run this line to update the data with a new geo-levels
 

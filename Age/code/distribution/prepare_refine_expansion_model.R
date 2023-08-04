@@ -102,7 +102,7 @@ temp_parcels_dmg <- model_parcels
 uploadpath = "Age/data/working/"
 files = list.files(uploadpath)
 filename = files[str_detect(files,"va_cttrbg_acs")]
-temp_acs_dmg <- read.csv(paste0(uploadpath,filename)) %>% select(geoid,year,measure,value,moe) 
+temp_acs_dmg <- readRDS(paste0(uploadpath,filename)) %>% select(geoid,year,measure,value,moe) 
 
 # combine acs with model
 fx_newgeo_dmg <- rbind(temp_acs_dmg,temp_parcels_dmg) %>% filter(!is.na(value)) %>% mutate(geoid=as.character(geoid))
