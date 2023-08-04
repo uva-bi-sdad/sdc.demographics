@@ -137,13 +137,24 @@ ncr_geo <- rbind(temp_bg2010,temp_bg2020,temp_ct2010,temp_ct2020,temp_tr2010,tem
 acs_data_ncr <- merge(acs_data_ncr, ncr_geo, by.x=c('geoid','region_type','census_year'), by.y=c('geoid','region_type','census_year'), all.y=T) %>%
   select(geoid,region_name,region_type,year,measure,value,measure_type,moe)
 
+acs_data_ncr <- acs_data_ncr %>%
+  mutate(measure=case_when(
+    measure=="pop_veteran" ~ "veteran_count_direct",
+    measure=="perc_veteran" ~ "veteran_percent_direct")) %>%
+  filter(!is.na(value)) %>%
+  mutate(geoid=as.character(geoid))
+
+acs_data_ncr_parcels <- acs_data_ncr %>%
+  mutate(measure=str_replace(measure,'direct','parcels'))
+
+acs_data_ncr <- rbind(acs_data_ncr,acs_data_ncr_parcels)
 
 
 # Save the data ----------------------------------------------------------------------------------
 savepath = "Veteran/data/working/"
 readr::write_csv(acs_data_va, xzfile(paste0(savepath,"va_cttrbg_acs_",min(years),'_',max(years),"_veteran_demographics.csv.xz"), compression = 9))
 
-savepath<-"Veteran/data/distribution"
+savepath<-"Veteran/data/distribution/"
 readr::write_csv(acs_data_ncr, xzfile(paste0(savepath,"ncr_cttrbg_acs_",min(years),'_',max(years),"_veteran_demographics.csv.xz"), compression = 9))
 
 

@@ -38,6 +38,7 @@ for (file in list.files(path)) {
 fairfax_pc_dmg_lg <- fairfax_pc_dmg %>%
   mutate(measure=str_remove_all(measure, paste('_refined_by_housing_units', collapse = "|"))) %>%
   select(parid=geoid,year,measure,value) %>%
+  filter(!is.na(value)) %>%
   pivot_wider(names_from = measure, values_from=value) 
 
 
