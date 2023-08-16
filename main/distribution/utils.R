@@ -34,8 +34,6 @@ run_data_prep <- function(topic, ingest=FALSE, direct=TRUE, refine=TRUE,
   #' param: clear_models(boolean); default F; clear models before running prep,
   #'           ensures no outdated data is kept if rerunning full code
   #' return: none - gathers, cleans, and saves data
-  start <- Sys.time()
-  
   runpath <- paste0(topic, "/code/distribution/")
   
   # removes all current models
@@ -66,8 +64,6 @@ run_data_prep <- function(topic, ingest=FALSE, direct=TRUE, refine=TRUE,
   print('combine done')
   
   rm(list = ls())
-  
-  print(Sys.time() - start)
 }
 
 update_measure_names <- function(path, filename, changes, save_new = NULL) {
